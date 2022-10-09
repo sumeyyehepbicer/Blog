@@ -1,0 +1,9 @@
+2022-03-08 00:00:36.856 +03:00 [INF] Starting
+2022-03-08 00:00:37.888 +03:00 [INF] User profile is available. Using 'C:\Users\hepbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-03-08 00:00:38.070 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-08 00:00:38.071 +03:00 [INF] Hosting environment: Development
+2022-03-08 00:00:38.073 +03:00 [INF] Content root path: C:\Users\hepbi\source\repos\Blog\Blog.API
+2022-03-08 00:00:38.108 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/index.html - -
+2022-03-08 00:00:38.208 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/index.html - - - 200 - text/html;charset=utf-8 101.8215ms
+2022-03-08 00:00:38.281 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - -
+2022-03-08 00:00:38.345 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.5546ms

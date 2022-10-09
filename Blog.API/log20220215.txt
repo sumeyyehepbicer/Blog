@@ -1,0 +1,100 @@
+2022-02-15 12:16:59.019 +03:00 [INF] Starting
+2022-02-15 12:17:01.597 +03:00 [INF] User profile is available. Using 'C:\Users\hepbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-15 12:17:02.000 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-15 12:17:02.002 +03:00 [INF] Hosting environment: Development
+2022-02-15 12:17:02.004 +03:00 [INF] Content root path: C:\Users\hepbi\source\repos\Blog\Blog.API
+2022-02-15 12:17:02.063 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger - -
+2022-02-15 12:17:02.152 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/index.html - -
+2022-02-15 12:17:02.167 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger - - - 301 - - 104.7890ms
+2022-02-15 12:17:02.429 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui.css - -
+2022-02-15 12:17:02.433 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - -
+2022-02-15 12:17:02.433 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui-bundle.js - -
+2022-02-15 12:17:02.433 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui-standalone-preset.js - -
+2022-02-15 12:17:02.433 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/index.html - - - 200 - text/html;charset=utf-8 279.9106ms
+2022-02-15 12:17:02.456 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 21.4826ms
+2022-02-15 12:17:02.524 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-02-15 12:17:02.524 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-02-15 12:17:02.528 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui.css - - - 200 142933 text/css 98.6658ms
+2022-02-15 12:17:02.533 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 99.9904ms
+2022-02-15 12:17:02.535 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-02-15 12:17:02.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 116.2547ms
+2022-02-15 12:17:02.671 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - -
+2022-02-15 12:17:02.702 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/favicon-32x32.png - -
+2022-02-15 12:17:02.706 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-02-15 12:17:02.708 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/favicon-32x32.png - - - 200 628 image/png 6.4361ms
+2022-02-15 12:17:02.755 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 84.1021ms
+2022-02-15 12:41:36.173 +03:00 [INF] Starting
+2022-02-15 12:41:37.770 +03:00 [FTL] Error
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Blog.API.Filters.ControlIpActionFilter Lifetime: Transient ImplementationType: Blog.API.Filters.ControlIpActionFilter': Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Blog.API.Filters.ControlIpActionFilter Lifetime: Transient ImplementationType: Blog.API.Filters.ControlIpActionFilter': Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Blog.API.Program.Main(String[] args) in C:\Users\hepbi\source\repos\Blog\Blog.API\Program.cs:line 26
+2022-02-15 12:42:05.763 +03:00 [INF] Starting
+2022-02-15 12:42:06.692 +03:00 [FTL] Error
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Blog.API.Filters.ControlIpActionFilter Lifetime: Transient ImplementationType: Blog.API.Filters.ControlIpActionFilter': Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Blog.API.Filters.ControlIpActionFilter Lifetime: Transient ImplementationType: Blog.API.Filters.ControlIpActionFilter': Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Blog.API.Services.RedisCacheService.IRedisCacheManagerService' while attempting to activate 'Blog.API.Filters.ControlIpActionFilter'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Blog.API.Program.Main(String[] args) in C:\Users\hepbi\source\repos\Blog\Blog.API\Program.cs:line 26
+2022-02-15 12:43:30.273 +03:00 [INF] Starting
+2022-02-15 12:43:31.195 +03:00 [INF] User profile is available. Using 'C:\Users\hepbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-15 12:43:31.487 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-15 12:43:31.489 +03:00 [INF] Hosting environment: Development
+2022-02-15 12:43:31.490 +03:00 [INF] Content root path: C:\Users\hepbi\source\repos\Blog\Blog.API
+2022-02-15 12:43:31.522 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/index.html - -
+2022-02-15 12:43:31.696 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - -
+2022-02-15 12:43:31.699 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/index.html - - - 200 - text/html;charset=utf-8 177.1505ms
+2022-02-15 12:43:31.710 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 7.1624ms
+2022-02-15 12:43:31.845 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - -
+2022-02-15 12:43:31.905 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 59.3295ms
+2022-02-15 12:44:19.946 +03:00 [INF] Starting
+2022-02-15 12:44:20.877 +03:00 [INF] User profile is available. Using 'C:\Users\hepbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-15 12:44:21.157 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-15 12:44:21.159 +03:00 [INF] Hosting environment: Development
+2022-02-15 12:44:21.160 +03:00 [INF] Content root path: C:\Users\hepbi\source\repos\Blog\Blog.API
+2022-02-15 12:44:21.197 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/index.html - -
+2022-02-15 12:44:21.371 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - -
+2022-02-15 12:44:21.374 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/index.html - - - 200 - text/html;charset=utf-8 177.5480ms
+2022-02-15 12:44:21.386 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 9.3591ms
+2022-02-15 12:44:21.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - -
+2022-02-15 12:44:21.522 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 60.0482ms
+2022-02-15 12:44:36.284 +03:00 [INF] Starting
+2022-02-15 12:44:37.320 +03:00 [INF] User profile is available. Using 'C:\Users\hepbi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-02-15 12:44:37.520 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-15 12:44:37.521 +03:00 [INF] Hosting environment: Development
+2022-02-15 12:44:37.523 +03:00 [INF] Content root path: C:\Users\hepbi\source\repos\Blog\Blog.API
+2022-02-15 12:44:37.555 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/index.html - -
+2022-02-15 12:44:37.733 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - -
+2022-02-15 12:44:37.736 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/index.html - - - 200 - text/html;charset=utf-8 182.1753ms
+2022-02-15 12:44:37.748 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/_framework/aspnetcore-browser-refresh.js - - - 200 11942 application/javascript;+charset=utf-8 6.8682ms
+2022-02-15 12:44:37.822 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - -
+2022-02-15 12:44:37.884 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:7099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 62.4906ms
